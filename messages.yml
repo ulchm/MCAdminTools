@@ -1,0 +1,7 @@
+xp-set: "{0}'s XP was changed."
+player-healed: "{0}''s health has been replenished."
+player-fed: "{0}''s hunger has been satisfied."
+player-dispelled: "All potion effects were removed from {0}."
+errors:
+  ambiguous-player: "More than one player matches the name ''{0}''."
+  player-not-found: "No player found matching the name ''{0}''."

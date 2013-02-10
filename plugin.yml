@@ -1,0 +1,95 @@
+name: MCAdminTools
+main: com.norcode.bukkit.mcadmintools.MCAdminTools
+version: 0.0.1
+commands:
+  xp:
+    aliases: [exp, experience]
+    description: give/take/set xp or levels.
+    usage: /<command> [give|take|set] [<player>] <amount>
+
+  heal:
+    description: Heal yourself or another player.
+    usage: /<command> [<player>]
+    permission: mcadmintools.heal
+  feed:
+    description: feed yourself or another player.
+    usage: /<command> [<player>]
+    permission: mcadmintools.feed
+  dispel:
+    aliases: [milk]
+    usage: /<command> [<player>]
+    description: remove all potion effects from yourself or another player.
+    permission: mcadmintools.dispel
+  invsee:
+    aliases: [viewinv, showinv, seeinv]
+    description: show another players inventory.
+    permission: mcadmintools.invsee
+  enderchest:
+    aliases: [endchest]
+    description: show another players enderchest inventory.
+    permission: mcadmintools.enderchest
+  kill:
+    description: kill another player.
+    usage: /<command> <player>
+    permission: mcadmintools.kill
+  suicide:
+    description: kill yourself.
+    usage: /<command>
+    permission: mcadmintools.suicide
+permissions:
+  mcadmintools.xp.set:
+    default: false
+    description: gives access to set own xp.
+  mcadmintools.xp.give:
+    default: false
+    description: gives access to give yourself xp.
+  mcadmintools.xp.take:
+    default: false
+    description: gives access to take xp from yourself.
+  mcadmintools.xp.set.others:
+    default: false
+    description: gives access to set another player's xp.
+  mcadmintools.xp.give.others:
+    default: false
+    description: gives access to give another player xp.
+  mcadmintools.xp.take.others:
+    default: false
+    description: gives access to take xp from another player.
+  mcadmintools.enderchest:
+    default: false
+    description: gives access to 'enderchest'.
+  mcadmintools.invsee:
+    default: false
+    description: gives access to 'invsee'.
+  mcadmintools.dispel:
+    default: false
+    description: gives access to 'dispel'.
+  mcadmintools.suicide:
+    default: false
+    description: gives access to 'suicide'.
+  mcadmintools.kill:
+    default: false
+    description: gives access to 'kill'.
+  mcadmintools.heal:
+    default: false
+    description: gives access to 'heal'.
+  mcadmintools.feed:
+    default: false
+    description: gives access to 'feed'.
+  mcadmintools.admin:
+    default: op
+    description: gives the access to all commands.
+    children: 
+        mcadmintools.heal: true
+        mcadmintools.feed: true
+        mcadmintools.kill: true
+        mcadmintools.suicide: true
+        mcadmintools.dispel: true
+        mcadmintools.invsee: true
+        mcadmintools.enderchest: true
+        mcadmintools.xp.set: true
+        mcadmintools.xp.set.others: true
+        mcadmintools.xp.give: true
+        mcadmintools.xp.give.others: true
+        mcadmintools.xp.take: true
+        mcadmintools.xp.take.others: true
