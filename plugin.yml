@@ -6,7 +6,10 @@ commands:
     aliases: [exp, experience]
     description: give/take/set xp or levels.
     usage: /<command> [give|take|set] [<player>] <amount>
-
+  splash:
+    usage: /<command> [<target>] <potionEffect> [<duration> <amplifier>}
+    description: Apply a potion effect to yourself or another player.
+    permission: mcadmintools.splash
   heal:
     description: Heal yourself or another player.
     usage: /<command> [<player>]

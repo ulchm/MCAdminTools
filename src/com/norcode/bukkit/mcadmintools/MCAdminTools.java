@@ -7,6 +7,7 @@ import com.norcode.bukkit.mcadmintools.commands.DispelCommand;
 import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
 import com.norcode.bukkit.mcadmintools.commands.HealCommand;
 import com.norcode.bukkit.mcadmintools.commands.KillCommand;
+import com.norcode.bukkit.mcadmintools.commands.SplashCommand;
 import com.norcode.bukkit.mcadmintools.commands.SuicideCommand;
 import com.norcode.bukkit.mcadmintools.commands.ViewEnderchestCommand;
 import com.norcode.bukkit.mcadmintools.commands.ViewInventoryCommand;
@@ -41,6 +42,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("enderchest").setExecutor(new ViewEnderchestCommand(this));
 		getServer().getPluginCommand("xp").setExecutor(new XPCommand(this));
 		getServer().getPluginCommand("workbench").setExecutor(new WorkbenchCommand(this));
+		getServer().getPluginCommand("splash").setExecutor(new SplashCommand(this));
 
 	}
 
