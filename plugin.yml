@@ -2,6 +2,11 @@ name: MCAdminTools
 main: com.norcode.bukkit.mcadmintools.MCAdminTools
 version: 0.0.1
 commands:
+  jump:
+    aliases: [j, jumpto]
+    description: teleport to the location you are targetting.
+    usage: /<command>
+    permission: mcadmintools.jump
   xp:
     aliases: [exp, experience]
     description: give/take/set xp or levels.
@@ -117,3 +122,5 @@ permissions:
         mcadmintools.workbench: true
         mcadmintools.splash: true
         mcadmintools.smite: true
+        mcadmintools.repair: true
+        mcadmintools.jump: true
