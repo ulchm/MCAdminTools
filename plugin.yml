@@ -6,6 +6,14 @@ commands:
     aliases: [exp, experience]
     description: give/take/set xp or levels.
     usage: /<command> [give|take|set] [<player>] <amount>
+  repair:
+    usage: /<command>
+    description: repairs the item in your hand.
+    permission: mcadmintools.repair
+  smite:
+    usage: /<command> <target>
+    description: Strike a player with lightning
+    permission: mcadmintools.smite
   splash:
     usage: /<command> [<target>] <potionEffect> [<duration> <amplifier>}
     description: Apply a potion effect to yourself or another player.
@@ -107,3 +115,5 @@ permissions:
         mcadmintools.xp.take: true
         mcadmintools.xp.take.others: true
         mcadmintools.workbench: true
+        mcadmintools.splash: true
+        mcadmintools.smite: true

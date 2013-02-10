@@ -12,9 +12,9 @@ import com.norcode.bukkit.mcadmintools.MCAdminTools;
 import com.norcode.bukkit.mcadmintools.exceptions.AmbiguousPlayerName;
 import com.norcode.bukkit.mcadmintools.exceptions.PlayerNotFound;
 
-public class KillCommand extends BaseCommand {
+public class SmiteCommand extends BaseCommand {
 
-	public KillCommand(MCAdminTools plugin) {
+	public SmiteCommand(MCAdminTools plugin) {
 		super(plugin);
 	}
 
@@ -48,7 +48,7 @@ public class KillCommand extends BaseCommand {
 			}
 			if (target == null) return true;
 		}
-		target.setHealth(0);
+		target.getLocation().getWorld().strikeLightning(target.getLocation());
 		return true;
 	}
 

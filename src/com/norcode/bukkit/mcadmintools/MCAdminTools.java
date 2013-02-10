@@ -7,6 +7,8 @@ import com.norcode.bukkit.mcadmintools.commands.DispelCommand;
 import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
 import com.norcode.bukkit.mcadmintools.commands.HealCommand;
 import com.norcode.bukkit.mcadmintools.commands.KillCommand;
+import com.norcode.bukkit.mcadmintools.commands.RepairCommand;
+import com.norcode.bukkit.mcadmintools.commands.SmiteCommand;
 import com.norcode.bukkit.mcadmintools.commands.SplashCommand;
 import com.norcode.bukkit.mcadmintools.commands.SuicideCommand;
 import com.norcode.bukkit.mcadmintools.commands.ViewEnderchestCommand;
@@ -43,7 +45,8 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("xp").setExecutor(new XPCommand(this));
 		getServer().getPluginCommand("workbench").setExecutor(new WorkbenchCommand(this));
 		getServer().getPluginCommand("splash").setExecutor(new SplashCommand(this));
-
+		getServer().getPluginCommand("smite").setExecutor(new SmiteCommand(this));
+		getServer().getPluginCommand("repair").setExecutor(new RepairCommand(this));
 	}
 
 	public String getMsg(String key, Object... args) {

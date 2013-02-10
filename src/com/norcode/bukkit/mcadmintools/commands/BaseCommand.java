@@ -13,7 +13,7 @@ import com.norcode.bukkit.mcadmintools.exceptions.AmbiguousPlayerName;
 import com.norcode.bukkit.mcadmintools.exceptions.PlayerNotFound;
 
 public abstract class BaseCommand implements TabExecutor {
-	MCAdminTools plugin;
+	protected MCAdminTools plugin;
 	
 	public BaseCommand(MCAdminTools plugin) {
 		this.plugin = plugin;
