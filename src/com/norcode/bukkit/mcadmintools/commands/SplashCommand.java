@@ -25,9 +25,17 @@ public class SplashCommand extends BaseCommand {
 	public List<String> onTabComplete(CommandSender sender, Command command,
 			String alias, LinkedList<String> args) {
 		List<String> matches = new ArrayList<>();
-		if (args.size() == 2) {
+		if (args.size() == 1) {
+			for (Player p: plugin.getServer().matchPlayer(args.peek())) {
+				matches.add(p.getName());
+			}
+		}
+		if (args.size() <= 2) {
 			for (PotionEffectType et: PotionEffectType.values()) {
-				if (et.getName().toLowerCase().startsWith(args.peek().toLowerCase())) {
+				
+				plugin.getLogger().info("EffectType: " + et);
+				if (et == null) continue;
+				if (et.getName().toLowerCase().startsWith(args.peekLast().toLowerCase())) {
 					matches.add(et.getName());
 				}
 			}
@@ -38,6 +46,7 @@ public class SplashCommand extends BaseCommand {
 
 	public boolean isPotionEffect(String s) {
 		for (PotionEffectType et: PotionEffectType.values()) {
+			if (et == null) continue;
 			if (et.getName().equalsIgnoreCase(s)) {
 				return true;
 			}
@@ -51,7 +60,7 @@ public class SplashCommand extends BaseCommand {
 		if (args.size() == 0) {
 			return false;
 		}
-		Player targetPlayer = null;
+		Player targetPlayer = (Player)sender;
 		
 		if (!isPotionEffect(args.peek())) {
 			try {
@@ -70,24 +79,26 @@ public class SplashCommand extends BaseCommand {
 			sender.sendMessage(plugin.getMsg("errors.expecting-potion-effect"));
 			return true;
 		}
-		PotionEffectType type = PotionEffectType.getByName(args.peek().toUpperCase());
-		int duration = 200;
+		PotionEffectType type = PotionEffectType.getByName(args.pop().toUpperCase());
+		int duration = 600;
 		if (args.size() >= 1) {
 			try {
-				duration = Integer.parseInt(args.pop());
+				duration = Integer.parseInt(args.peek());
 			} catch (IllegalArgumentException ex) {
 				sender.sendMessage(plugin.getMsg("errors.invalid-number", args.peek()));
 				return true;
 			}
+			args.pop();
 		}
 		int amplifier = 1;
 		if (args.size() >= 1) {
 			try {
-				amplifier = Integer.parseInt(args.pop());
+				amplifier = Integer.parseInt(args.peek());
 			} catch (IllegalArgumentException ex) {
 				sender.sendMessage(plugin.getMsg("errors.invalid-number", args.peek()));
 				return true;
 			}
+			args.pop();
 		}
 		PotionEffect effect = new PotionEffect(type, duration, amplifier);
 		targetPlayer.addPotionEffect(effect);
