@@ -36,7 +36,17 @@ commands:
     description: kill yourself.
     usage: /<command>
     permission: mcadmintools.suicide
+  workbench:
+    description: opens a crafting table.
+    usage: /<command>
+    permission: mcadmintools.workbench
 permissions:
+  mcadmintools.anvil:
+    default: false
+    description: gives access to anvil command.
+  mcadmintools.workbench:
+    default: false
+    description: gives access to workbench command
   mcadmintools.xp.set:
     default: false
     description: gives access to set own xp.
@@ -93,3 +103,4 @@ permissions:
         mcadmintools.xp.give.others: true
         mcadmintools.xp.take: true
         mcadmintools.xp.take.others: true
+        mcadmintools.workbench: true

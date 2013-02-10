@@ -10,6 +10,7 @@ import com.norcode.bukkit.mcadmintools.commands.KillCommand;
 import com.norcode.bukkit.mcadmintools.commands.SuicideCommand;
 import com.norcode.bukkit.mcadmintools.commands.ViewEnderchestCommand;
 import com.norcode.bukkit.mcadmintools.commands.ViewInventoryCommand;
+import com.norcode.bukkit.mcadmintools.commands.WorkbenchCommand;
 import com.norcode.bukkit.mcadmintools.commands.XPCommand;
 
 
@@ -39,7 +40,8 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("invsee").setExecutor(new ViewInventoryCommand(this));
 		getServer().getPluginCommand("enderchest").setExecutor(new ViewEnderchestCommand(this));
 		getServer().getPluginCommand("xp").setExecutor(new XPCommand(this));
-		
+		getServer().getPluginCommand("workbench").setExecutor(new WorkbenchCommand(this));
+
 	}
 
 	public String getMsg(String key, Object... args) {
