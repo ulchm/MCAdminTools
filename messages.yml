@@ -5,6 +5,7 @@ player-dispelled: "All potion effects were removed from {0}."
 potion-effect-applied: "The selected potion effect was applied to {0}."
 item-repaired: "Item repaired."
 errors:
+  unknown-gamemode: "Unknown gamemode: {0}."
   cannot-repair: "This item cannot be repaired."
   invalid-number: "Invalid numeric value: {0}."
   expecting-potion-effect: "Expecting a potion effect name."

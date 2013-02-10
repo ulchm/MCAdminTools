@@ -2,6 +2,10 @@ name: MCAdminTools
 main: com.norcode.bukkit.mcadmintools.MCAdminTools
 version: 0.0.1
 commands:
+  gamemode:
+    aliases: [gmc, gms, gm]
+    description: change your or another player's game mode.
+    permission: mcadmintools.gamemode
   jump:
     aliases: [j, jumpto]
     description: teleport to the location you are targetting.
@@ -57,9 +61,9 @@ commands:
     usage: /<command>
     permission: mcadmintools.workbench
 permissions:
-  mcadmintools.anvil:
+  mcadmintools.gamemode:
     default: false
-    description: gives access to anvil command.
+    description: give access to gamemode command
   mcadmintools.workbench:
     default: false
     description: gives access to workbench command
@@ -124,3 +128,4 @@ permissions:
         mcadmintools.smite: true
         mcadmintools.repair: true
         mcadmintools.jump: true
+        mcadmintools.gamemode: true
