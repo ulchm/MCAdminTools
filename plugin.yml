@@ -2,6 +2,9 @@ name: MCAdminTools
 main: com.norcode.bukkit.mcadmintools.MCAdminTools
 version: 0.0.1
 commands:
+  give:
+    description: Give items.
+    permission: mcadmintools.give
   gamemode:
     aliases: [gmc, gms, gm]
     description: change your or another player's game mode.
@@ -109,6 +112,9 @@ permissions:
   mcadmintools.feed:
     default: false
     description: gives access to 'feed'.
+  mcadmintools.give:
+    default: false
+    description: gives access to 'give'.
   mcadmintools.admin:
     default: op
     description: gives the access to all commands.
@@ -132,3 +138,4 @@ permissions:
         mcadmintools.repair: true
         mcadmintools.jump: true
         mcadmintools.gamemode: true
+        mcadmintools.give: true

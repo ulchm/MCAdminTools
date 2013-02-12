@@ -6,6 +6,7 @@ potion-effect-applied: "The selected potion effect was applied to {0}."
 item-repaired: "Item repaired."
 stack-filled: "The stack has been filled to it's max size."
 errors:
+  unknown-material: "Unknown material: {0}."
   unknown-gamemode: "Unknown gamemode: {0}."
   cannot-repair: "This item cannot be repaired."
   invalid-number: "Invalid numeric value: {0}."

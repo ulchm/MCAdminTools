@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.norcode.bukkit.mcadmintools.commands.DispelCommand;
 import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
 import com.norcode.bukkit.mcadmintools.commands.GamemodeCommand;
+import com.norcode.bukkit.mcadmintools.commands.GiveCommand;
 import com.norcode.bukkit.mcadmintools.commands.HealCommand;
 import com.norcode.bukkit.mcadmintools.commands.JumpCommand;
 import com.norcode.bukkit.mcadmintools.commands.KillCommand;
@@ -53,6 +54,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("repair").setExecutor(new RepairCommand(this));
 		getServer().getPluginCommand("jump").setExecutor(new JumpCommand(this));
 		getServer().getPluginCommand("more").setExecutor(new MoreCommand(this));
+		getServer().getPluginCommand("give").setExecutor(new GiveCommand(this));
 	}
 
 	public String getMsg(String key, Object... args) {
