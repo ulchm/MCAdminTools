@@ -84,12 +84,14 @@ public class GamemodeCommand extends BaseCommand {
 			mode = 0;
 			break;
 		default:
-			mode = parseMode(args.pop());
+			mode = parseMode(args.peek());
 			if (mode == null) {
 				sender.sendMessage(plugin.getMsg("errors.unknown-gamemode", args.peek()));
 				return true;
 			}
+			args.pop();
 		}
+		
 		Player target = (Player)sender;
 		if (args.size() == 1) {
 			try {
@@ -102,7 +104,9 @@ public class GamemodeCommand extends BaseCommand {
 				return true;
 			}
 		}
+		plugin.getLogger().info("Setting " + target.getName() + "'s gamemode to " + GameMode.getByValue(mode));
 		target.setGameMode(GameMode.getByValue(mode));
+		
 		return true;
 	}
 
