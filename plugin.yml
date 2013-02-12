@@ -15,6 +15,9 @@ commands:
     aliases: [exp, experience]
     description: give/take/set xp or levels.
     usage: /<command> [give|take|set] [<player>] <amount>
+  more:
+    description: Maxes the stack size of the current item.
+    usage: /<command>
   repair:
     usage: /<command>
     description: repairs the item in your hand.
