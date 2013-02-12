@@ -4,6 +4,7 @@ player-fed: "{0}''s hunger has been satisfied."
 player-dispelled: "All potion effects were removed from {0}."
 potion-effect-applied: "The selected potion effect was applied to {0}."
 item-repaired: "Item repaired."
+stack-filled: "The stack has been filled to it's max size."
 errors:
   unknown-gamemode: "Unknown gamemode: {0}."
   cannot-repair: "This item cannot be repaired."
@@ -11,3 +12,4 @@ errors:
   expecting-potion-effect: "Expecting a potion effect name."
   ambiguous-player: "More than one player matches the name ''{0}''."
   player-not-found: "No player found matching the name ''{0}''."
+

@@ -8,6 +8,7 @@ import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
 import com.norcode.bukkit.mcadmintools.commands.HealCommand;
 import com.norcode.bukkit.mcadmintools.commands.JumpCommand;
 import com.norcode.bukkit.mcadmintools.commands.KillCommand;
+import com.norcode.bukkit.mcadmintools.commands.MoreCommand;
 import com.norcode.bukkit.mcadmintools.commands.RepairCommand;
 import com.norcode.bukkit.mcadmintools.commands.SmiteCommand;
 import com.norcode.bukkit.mcadmintools.commands.SplashCommand;
@@ -49,6 +50,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("smite").setExecutor(new SmiteCommand(this));
 		getServer().getPluginCommand("repair").setExecutor(new RepairCommand(this));
 		getServer().getPluginCommand("jump").setExecutor(new JumpCommand(this));
+		getServer().getPluginCommand("more").setExecutor(new MoreCommand(this));
 
 	}
 
