@@ -5,6 +5,7 @@ player-dispelled: "All potion effects were removed from {0}."
 potion-effect-applied: "The selected potion effect was applied to {0}."
 item-repaired: "Item repaired."
 stack-filled: "The stack has been filled to it's max size."
+cooked: "The items have been cooked!"
 errors:
   unknown-material: "Unknown material: {0}."
   unknown-gamemode: "Unknown gamemode: {0}."
@@ -13,4 +14,4 @@ errors:
   expecting-potion-effect: "Expecting a potion effect name."
   ambiguous-player: "More than one player matches the name ''{0}''."
   player-not-found: "No player found matching the name ''{0}''."
-
+  cant-cook-item: "You can't cook or smelt that item"

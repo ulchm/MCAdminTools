@@ -3,6 +3,7 @@ import java.text.MessageFormat;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.norcode.bukkit.mcadmintools.commands.CookCommand;
 import com.norcode.bukkit.mcadmintools.commands.DispelCommand;
 import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
 import com.norcode.bukkit.mcadmintools.commands.GamemodeCommand;
@@ -55,6 +56,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("jump").setExecutor(new JumpCommand(this));
 		getServer().getPluginCommand("more").setExecutor(new MoreCommand(this));
 		getServer().getPluginCommand("give").setExecutor(new GiveCommand(this));
+		getServer().getPluginCommand("cook").setExecutor(new CookCommand(this));
 	}
 
 	public String getMsg(String key, Object... args) {
