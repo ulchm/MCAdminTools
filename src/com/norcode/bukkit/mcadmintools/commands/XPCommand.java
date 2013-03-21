@@ -77,7 +77,7 @@ public class XPCommand extends BaseCommand {
 				return true;
 			}
 			try {
-				target = parsePlayer(args.pop());
+				target = parsePlayer(args.peek());
 			} catch (AmbiguousPlayerName ex) {
 				sender.sendMessage(plugin.getMsg("errors.ambiguous-player", args.peek()));
 				return true;

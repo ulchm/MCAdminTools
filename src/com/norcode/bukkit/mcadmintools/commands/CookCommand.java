@@ -31,21 +31,29 @@ public class CookCommand extends BaseCommand {
 	public boolean onCommand(CommandSender sender, Command command,
 			String alias, LinkedList<String> args) {
 		ConfigurationSection cfg = plugin.getConfig().getConfigurationSection("cook-mappings");
-		String newMaterialName = cfg.getString(((Player)sender).getItemInHand().getType().name());
+		String key = ((Player)sender).getItemInHand().getType().name();
+		String newMaterialName = cfg.getString(key);
 		if (newMaterialName == null) {
 			((Player)sender).sendMessage(plugin.getMsg("errors.cant-cook-item"));
 			return true;
 		}
 		Material newMat = null;
+		Short dur = null;
 		if (newMaterialName.contains(":")) {
 			String[] materials = newMaterialName.split(":"); 
 			newMat = Material.getMaterial(materials[0]);
-			((Player)sender).getItemInHand().setType(newMat);
-			((Player)sender).getItemInHand().setDurability(Short.parseShort(materials[1]));
-			
+			dur = Short.parseShort(materials[1]);
 		} else {
 			newMat = Material.getMaterial(newMaterialName);
-			((Player)sender).getItemInHand().setType(newMat);
+		}
+		
+		if (newMat == null) {
+			sender.sendMessage(plugin.getMsg("errors.cant-cook-item"));
+			return true;
+		}
+		((Player)sender).getItemInHand().setType(newMat);
+		if (dur != null) {
+			((Player)sender).getItemInHand().setDurability(dur);
 		}
 		((Player)sender).sendMessage(plugin.getMsg("cooked"));
 		return true;

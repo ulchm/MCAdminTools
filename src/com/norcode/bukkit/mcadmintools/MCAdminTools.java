@@ -1,6 +1,7 @@
 package com.norcode.bukkit.mcadmintools;
 import java.text.MessageFormat;
 
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.norcode.bukkit.mcadmintools.commands.CookCommand;
@@ -36,6 +37,7 @@ public class MCAdminTools extends JavaPlugin {
 		getConfig().options().copyDefaults(true);
 		saveDefaultConfig();
 		reloadConfig();
+		saveConfig();
 		messages.getConfig().options().copyDefaults(true);
 		messages.saveDefaultConfig();
 		messages.reloadConfig();
@@ -67,6 +69,7 @@ public class MCAdminTools extends JavaPlugin {
 				tpl += "{"+i+"}, ";
 			}
 		}
+		
 		return MessageFormat.format(tpl,args);
 	}
 }
