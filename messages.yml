@@ -7,6 +7,7 @@ potion-effect-applied: "The selected potion effect was applied to {0}."
 item-repaired: "Item repaired."
 stack-filled: "The stack has been filled to it's max size."
 cooked: "The items have been cooked!"
+world-spawn-set: "The spawn point for {0} was set to {1},{2},{3}."
 errors:
   unknown-enchantment: "Unknown enchantment: {0}"
   illegal-enchantment-target: "{0} cannot be applied to {1}"

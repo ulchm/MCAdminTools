@@ -1,11 +1,11 @@
 package com.norcode.bukkit.mcadmintools;
 import java.text.MessageFormat;
 
-import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.norcode.bukkit.mcadmintools.commands.CookCommand;
 import com.norcode.bukkit.mcadmintools.commands.DispelCommand;
+import com.norcode.bukkit.mcadmintools.commands.EnchantCommand;
 import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
 import com.norcode.bukkit.mcadmintools.commands.GamemodeCommand;
 import com.norcode.bukkit.mcadmintools.commands.GiveCommand;
@@ -14,7 +14,9 @@ import com.norcode.bukkit.mcadmintools.commands.JumpCommand;
 import com.norcode.bukkit.mcadmintools.commands.KillCommand;
 import com.norcode.bukkit.mcadmintools.commands.MoreCommand;
 import com.norcode.bukkit.mcadmintools.commands.RepairCommand;
+import com.norcode.bukkit.mcadmintools.commands.SetSpawnCommand;
 import com.norcode.bukkit.mcadmintools.commands.SmiteCommand;
+import com.norcode.bukkit.mcadmintools.commands.SpawnCommand;
 import com.norcode.bukkit.mcadmintools.commands.SplashCommand;
 import com.norcode.bukkit.mcadmintools.commands.SuicideCommand;
 import com.norcode.bukkit.mcadmintools.commands.ViewEnderchestCommand;
@@ -59,6 +61,9 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("more").setExecutor(new MoreCommand(this));
 		getServer().getPluginCommand("give").setExecutor(new GiveCommand(this));
 		getServer().getPluginCommand("cook").setExecutor(new CookCommand(this));
+		getServer().getPluginCommand("setspawn").setExecutor(new SetSpawnCommand(this));
+		getServer().getPluginCommand("spawn").setExecutor(new SpawnCommand(this));
+		getServer().getPluginCommand("enchant").setExecutor(new EnchantCommand(this));
 	}
 
 	public String getMsg(String key, Object... args) {
