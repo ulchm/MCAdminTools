@@ -50,8 +50,8 @@ public class GiveCommand extends BaseCommand {
 		} catch (IllegalArgumentException ex) {};
 		List<Material> matches = new ArrayList<>();
 		for (Material m: Material.values()) {
-			if (m.name().startsWith(partial)) {
-				if (m.name().equals(partial)) {
+			if (m.name().toLowerCase().startsWith(partial.toLowerCase())) {
+				if (m.name().toLowerCase().equals(partial.toLowerCase())) {
 					return m;
 				}
 				matches.add(m);
