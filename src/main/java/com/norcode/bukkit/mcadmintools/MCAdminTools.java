@@ -1,28 +1,8 @@
 package com.norcode.bukkit.mcadmintools;
 import java.text.MessageFormat;
 
+import com.norcode.bukkit.mcadmintools.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import com.norcode.bukkit.mcadmintools.commands.CookCommand;
-import com.norcode.bukkit.mcadmintools.commands.DispelCommand;
-import com.norcode.bukkit.mcadmintools.commands.EnchantCommand;
-import com.norcode.bukkit.mcadmintools.commands.FeedCommand;
-import com.norcode.bukkit.mcadmintools.commands.GamemodeCommand;
-import com.norcode.bukkit.mcadmintools.commands.GiveCommand;
-import com.norcode.bukkit.mcadmintools.commands.HealCommand;
-import com.norcode.bukkit.mcadmintools.commands.JumpCommand;
-import com.norcode.bukkit.mcadmintools.commands.KillCommand;
-import com.norcode.bukkit.mcadmintools.commands.MoreCommand;
-import com.norcode.bukkit.mcadmintools.commands.RepairCommand;
-import com.norcode.bukkit.mcadmintools.commands.SetSpawnCommand;
-import com.norcode.bukkit.mcadmintools.commands.SmiteCommand;
-import com.norcode.bukkit.mcadmintools.commands.SpawnCommand;
-import com.norcode.bukkit.mcadmintools.commands.SplashCommand;
-import com.norcode.bukkit.mcadmintools.commands.SuicideCommand;
-import com.norcode.bukkit.mcadmintools.commands.ViewEnderchestCommand;
-import com.norcode.bukkit.mcadmintools.commands.ViewInventoryCommand;
-import com.norcode.bukkit.mcadmintools.commands.WorkbenchCommand;
-import com.norcode.bukkit.mcadmintools.commands.XPCommand;
 
 
 public class MCAdminTools extends JavaPlugin {
@@ -64,6 +44,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("setspawn").setExecutor(new SetSpawnCommand(this));
 		getServer().getPluginCommand("spawn").setExecutor(new SpawnCommand(this));
 		getServer().getPluginCommand("enchant").setExecutor(new EnchantCommand(this));
+        getServer().getPluginCommand("flyspeed").setExecutor(new FlySpeedCommand(this));
 	}
 
 	public String getMsg(String key, Object... args) {

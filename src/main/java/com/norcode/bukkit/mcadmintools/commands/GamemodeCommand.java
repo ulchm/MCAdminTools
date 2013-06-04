@@ -91,8 +91,10 @@ public class GamemodeCommand extends BaseCommand {
 			}
 			args.pop();
 		}
-		
-		Player target = (Player)sender;
+		Player target = null;
+		if (sender instanceof Player) {
+		    target = (Player) sender;
+		}
 		if (args.size() == 1) {
 			try {
 				target = parsePlayer(args.peek());
@@ -104,9 +106,12 @@ public class GamemodeCommand extends BaseCommand {
 				return true;
 			}
 		}
-		plugin.getLogger().info("Setting " + target.getName() + "'s gamemode to " + GameMode.getByValue(mode));
-		target.setGameMode(GameMode.getByValue(mode));
-		
+		if (target != null) {
+    		plugin.getLogger().info("Setting " + target.getName() + "'s gamemode to " + GameMode.getByValue(mode));
+    		target.setGameMode(GameMode.getByValue(mode));
+		} else {
+		    sender.sendMessage(plugin.getMsg("errors.player-not-found"));
+		}
 		return true;
 	}
 

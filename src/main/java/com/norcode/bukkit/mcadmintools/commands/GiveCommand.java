@@ -24,11 +24,13 @@ public class GiveCommand extends BaseCommand {
 	public List<String> onTabComplete(CommandSender sender, Command command,
 			String alias, LinkedList<String> args) {
 		if (args.size() == 1) return null;
-		List<String> matches = new ArrayList<>();
+		List<String> matches = new ArrayList<String>();
 		if (args.size() == 2) {
 			String partial = args.peekLast().toLowerCase();
 			for (Material m: Material.values()) {
-				matches.add(m.name());
+				if (m.name().toLowerCase().startsWith(partial)) {
+                    matches.add(m.name());
+                }
 			}
 			return matches;
 		}
@@ -42,13 +44,14 @@ public class GiveCommand extends BaseCommand {
 	}
 	
 	public Material findMaterial(String partial) {
+
 		int matId;
 		try {
 			matId = Integer.parseInt(partial);
 			Material mat = Material.getMaterial(matId);
 			if (mat != null) return mat;
 		} catch (IllegalArgumentException ex) {};
-		List<Material> matches = new ArrayList<>();
+		List<Material> matches = new ArrayList<Material>();
 		for (Material m: Material.values()) {
 			if (m.name().toLowerCase().startsWith(partial.toLowerCase())) {
 				if (m.name().toLowerCase().equals(partial.toLowerCase())) {
