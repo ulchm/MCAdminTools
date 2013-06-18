@@ -86,6 +86,11 @@ commands:
     description: enchants the item in hand with the given enchantments.
     usage: /<command> [[<enchantment> <level>] ...]
     permission: mcadmintools.enchant
+  broadcast:
+    aliases: [announce]
+    permission: mcadmintools.broadcast
+    usage: /<command> <message>
+    description: broadcast a message to all users on the server.
   flyspeed:
     aliases: [fspeed]
     description: adjust flight speed
@@ -158,6 +163,9 @@ permissions:
   mcadmintools.flyspeed:
     default: false
     description: gives access to 'flyspeed'
+  mcadmintools.broadcast:
+    default: op
+    description: gives access to 'broadcast'
   mcadmintools.admin:
     default: op
     description: gives the access to all commands.
@@ -188,3 +196,4 @@ permissions:
         mcadmintools.setspawn: true
         mcadmintools.spawn: true
         mcadmintools.flyspeed: true
+        mcadmintools.broadcast: true
