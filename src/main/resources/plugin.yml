@@ -96,6 +96,11 @@ commands:
     description: adjust flight speed
     usage: /<command> [1-5]
     permission: mcadmintools.flyspeed
+  playerhead:
+    aliases: [phead]
+    description: spawn a players head
+    usage: /<command> <headOwner> <receiver>
+    permission: mcadmintools.playerhead
 permissions:
   mcadmintools.spawn:
     default: true
@@ -166,6 +171,9 @@ permissions:
   mcadmintools.broadcast:
     default: op
     description: gives access to 'broadcast'
+  mcadmintools.playerhead:
+    default: op
+    description: gives access to 'playerhead' command
   mcadmintools.admin:
     default: op
     description: gives the access to all commands.
@@ -197,3 +205,4 @@ permissions:
         mcadmintools.spawn: true
         mcadmintools.flyspeed: true
         mcadmintools.broadcast: true
+        mcadmintools.playerhead: true

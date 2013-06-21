@@ -46,6 +46,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("enchant").setExecutor(new EnchantCommand(this));
         getServer().getPluginCommand("flyspeed").setExecutor(new FlySpeedCommand(this));
         getServer().getPluginCommand("broadcast").setExecutor(new BroadcastCommand(this));
+        getServer().getPluginCommand("playerhead").setExecutor(new PlayerHeadCommand(this));
 	}
 
 	public String getMsg(String key, Object... args) {
@@ -59,4 +60,5 @@ public class MCAdminTools extends JavaPlugin {
 		
 		return MessageFormat.format(tpl,args);
 	}
+
 }
