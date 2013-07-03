@@ -2,6 +2,10 @@ name: MCAdminTools
 main: com.norcode.bukkit.mcadmintools.MCAdminTools
 version: 0.0.1
 commands:
+  fly:
+    usage: /<fly> [<player>]
+    description: Toggle flight
+    permission: mcadmintools.fly
   spawn:
     usage: /<command>
     description: Teleports the player to the server's spawn point.
@@ -102,6 +106,12 @@ commands:
     usage: /<command> <headOwner> <receiver>
     permission: mcadmintools.playerhead
 permissions:
+  mcadmintools.fly:
+    default: op
+    description: allow flight
+  mcadmintools.fly.others:
+    default: op
+    description: allow giving flight to others.
   mcadmintools.spawn:
     default: true
     description: give access to spawn command

@@ -44,6 +44,7 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("setspawn").setExecutor(new SetSpawnCommand(this));
 		getServer().getPluginCommand("spawn").setExecutor(new SpawnCommand(this));
 		getServer().getPluginCommand("enchant").setExecutor(new EnchantCommand(this));
+        getServer().getPluginCommand("fly").setExecutor(new FlyCommand(this));
         getServer().getPluginCommand("flyspeed").setExecutor(new FlySpeedCommand(this));
         getServer().getPluginCommand("broadcast").setExecutor(new BroadcastCommand(this));
         getServer().getPluginCommand("playerhead").setExecutor(new PlayerHeadCommand(this));
