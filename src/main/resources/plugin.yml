@@ -1,9 +1,15 @@
 name: MCAdminTools
 main: com.norcode.bukkit.mcadmintools.MCAdminTools
 version: 0.0.1
+softdepend: [Votifier]
+
 commands:
+  mcadmintools:
+    usage: /<command> reloadconfig
+    description: reload the config file
+    permission: mcadmintools.admin
   fly:
-    usage: /<fly> [<player>]
+    usage: /<command> [<player>]
     description: Toggle flight
     permission: mcadmintools.fly
   spawn:
