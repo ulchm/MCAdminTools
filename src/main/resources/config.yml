@@ -1,3 +1,7 @@
+handle-votifier: false
+votifier-commands:
+  - "broadcast thanks for the vote __name__."
+
 cook-mappings:
     PORK: GRILLED_PORK
     RAW_FISH: COOKED_FISH

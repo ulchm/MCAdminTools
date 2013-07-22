@@ -26,7 +26,8 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Maven: org.bukkit:bukkit:1.5.2-R0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bukkit:bukkit:1.5.2-R0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.vexsoftware:Votifier:1.9" level="project" />
   </component>
 </module>
 

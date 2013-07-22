@@ -31,6 +31,12 @@
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
             <version>1.5.2-R0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.vexsoftware</groupId>
+            <artifactId>Votifier</artifactId>
+            <version>1.9</version>
         </dependency>
     </dependencies>
 </project>

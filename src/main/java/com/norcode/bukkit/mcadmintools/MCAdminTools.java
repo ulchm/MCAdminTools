@@ -23,7 +23,9 @@ public class MCAdminTools extends JavaPlugin {
 		messages.getConfig().options().copyDefaults(true);
 		messages.saveDefaultConfig();
 		messages.reloadConfig();
-		
+        if (getConfig().getBoolean("handle-votifier", false)) {
+            getServer().getPluginManager().registerEvents(new VotifierListener(this), this);
+        }
 		getServer().getPluginCommand("heal").setExecutor(new HealCommand(this));
 		getServer().getPluginCommand("feed").setExecutor(new FeedCommand(this));
 		getServer().getPluginCommand("kill").setExecutor(new KillCommand(this));
