@@ -121,6 +121,9 @@ permissions:
   mcadmintools.spawn:
     default: true
     description: give access to spawn command
+  mcadmintools.spawn.others:
+    default: op
+    description: give access to send others to spawn
   mcadmintools.setspawn:
     default: false
     description: give access to setspawn command

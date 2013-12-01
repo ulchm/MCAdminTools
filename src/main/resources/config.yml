@@ -1,4 +1,3 @@
-handle-votifier: false
 votifier-commands:
   - "broadcast thanks for the vote __name__."
 

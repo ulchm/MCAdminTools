@@ -37,8 +37,14 @@ public class SpawnCommand extends BaseCommand {
             String alias, LinkedList<String> args) {
         Player target = null;
         if (args.size() == 0) {
-            return false;
+            if (!(sender instanceof Player)) {
+                return false;
+            }
+            target = (Player) sender;
         } else {
+            if (!sender.hasPermission("mcadmintools.spawn.others")) {
+                return false;
+            }
             try {
                 target = parsePlayer(args.peek());
             } catch (AmbiguousPlayerName ex) {

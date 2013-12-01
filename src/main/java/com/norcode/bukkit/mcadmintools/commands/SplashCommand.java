@@ -32,7 +32,6 @@ public class SplashCommand extends BaseCommand {
 		}
 		if (args.size() <= 2) {
 			for (PotionEffectType et: PotionEffectType.values()) {
-				
 				plugin.getLogger().info("EffectType: " + et);
 				if (et == null) continue;
 				if (et.getName().toLowerCase().startsWith(args.peekLast().toLowerCase())) {
