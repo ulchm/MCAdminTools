@@ -42,7 +42,6 @@ public class MCAdminTools extends JavaPlugin {
 		getServer().getPluginCommand("repair").setExecutor(new RepairCommand(this));
 		getServer().getPluginCommand("jump").setExecutor(new JumpCommand(this));
 		getServer().getPluginCommand("more").setExecutor(new MoreCommand(this));
-		getServer().getPluginCommand("give").setExecutor(new GiveCommand(this));
 		getServer().getPluginCommand("cook").setExecutor(new CookCommand(this));
 		getServer().getPluginCommand("setspawn").setExecutor(new SetSpawnCommand(this));
 		getServer().getPluginCommand("spawn").setExecutor(new SpawnCommand(this));

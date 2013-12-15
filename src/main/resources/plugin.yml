@@ -178,9 +178,6 @@ permissions:
   mcadmintools.feed:
     default: false
     description: gives access to 'feed'.
-  mcadmintools.give:
-    default: false
-    description: gives access to 'give'.
   mcadmintools.cook:
     default: false
     description: gives access to 'cook'.
@@ -218,7 +215,6 @@ permissions:
         mcadmintools.jump: true
         mcadmintools.gamemode: true
         mcadmintools.more: true
-        mcadmintools.give: true
         mcadmintools.cook: true
         mcadmintools.setspawn: true
         mcadmintools.spawn: true
