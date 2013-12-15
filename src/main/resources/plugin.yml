@@ -20,10 +20,6 @@ commands:
     usage: /<command>
     description: Sets the spawn point of the current world to the players current location.
     permission: mcadmintools.setspawn
-  give:
-    usage: /<command> <player> <material> [<qty>]
-    description: Give items.
-    permission: mcadmintools.give
   gamemode:
     aliases: [gmc, gms, gm]
     description: change your or another player's game mode.
